@@ -1,27 +1,39 @@
-function signIn (){
-  var id = document.getElementById('ID');
-  var password = document.getElementById('PassWord');
+//const body = document.querySelector('body');
+//const p = document.getElementById('p1');
 
-  if (id === "Ej inc." && password === "overRide"){
-    alert("Success! you passed the test.");
+function signIn (){
+  const id = document.getElementById('ID').value;
+  const pass = document.getElementById('PassWord').value;
+
+  if (id == 'EJ inc.' && pass == 'overRide.') {
+    let pP = prompt("password");
+
+    if (pP == 'easterEgg') {
+      alert("Success you have passed the test!");
+
+    } else {
+      alert("Try again...");
+    }
   } else {
-    alert("Try again...");
-  };
+      alert("Try again...")
+  }
 };
 
 function hint (){
-  var body = document.querySelector('body');
-  var p = document.getElementById('p1');
+  const body = document.querySelector('body');
+  const p = document.getElementById('p1');
 
   body.style.backgroundColor = "lightGrey";
   p.style.color = "lightGrey";
+
 };
 
 function hidA (){
-  var body = document.querySelector('body');
-  var p = document.getElementById('p1');
+  const body = document.querySelector('body');
+  const p = document.getElementById('p1');
 
-  p.style.color = "black";
-  p.style.transition = "2s";
-  p.text = "User ID: EJ inc. Password: overRide "
+  p.style.color = ('black');
+  p.style.transition = ('2s');
+  p.text = ('User ID: EJ inc. - Password: overRide. - On Prompt Password: easterEgg');
+
 };
